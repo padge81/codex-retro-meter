@@ -28,7 +28,7 @@ try {
 
     if ($Package) {
         New-Item -ItemType Directory -Force -Path 'dist' | Out-Null
-        Compress-Archive -LiteralPath 'build/RetroUsage.exe','LICENSE','README.md','docs/auto-resume.md','docs/resume-monitor-prompt.md' -DestinationPath 'dist/codex-retro-meter-windows.zip' -Force
+        Compress-Archive -LiteralPath 'build/RetroUsage.exe','LICENSE','README.md','CONTRIBUTING.md','docs' -DestinationPath 'dist/codex-retro-meter-windows.zip' -Force
         Write-Output 'Packaged dist/codex-retro-meter-windows.zip'
     }
 } finally {

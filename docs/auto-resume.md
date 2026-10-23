@@ -6,7 +6,7 @@ The application detects recovery and writes a request; it does not send messages
 
 1. Build and run the meter. Choose a permanent writable location for its executable. The containing folder is your **meter directory**.
 2. Open a dedicated local Codex chat for monitoring. Identify that chat's ID so the monitor can exclude itself.
-3. Open `docs/resume-monitor-prompt.md` from the source repository. If using the portable ZIP, it is included as `resume-monitor-prompt.md` beside the other files.
+3. Open `docs/resume-monitor-prompt.md` from the source repository or extracted portable ZIP.
 4. Replace `{{METER_DIRECTORY}}` with the absolute meter directory, and `{{MONITOR_CHAT_ID}}` with that monitoring chat's ID.
 5. Ask Codex to create a recurring scheduled task in the monitoring chat, every 15 minutes, using the completed prompt. Explicitly authorize continuation messages to local chats whose latest turn failed because of an observed usage outage.
 6. Confirm that the scheduled task exists, then turn **AUTO RESUME: ON** in the meter.
