@@ -1,0 +1,23 @@
+name: Windows build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build, test and package
+        shell: powershell
+        run: .\build.ps1 -Test -Package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: codex-retro-meter-windows
+          path: dist/codex-retro-meter-windows.zip
+          if-no-files-found: error

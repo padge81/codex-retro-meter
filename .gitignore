@@ -1,0 +1,24 @@
+# Generated builds and packages
+build/
+dist/
+bin/
+obj/
+*.exe
+*.pdb
+*.zip
+
+# Local account usage, desktop preferences, recovery requests and chat IDs
+settings.json
+usage-cache.json
+auto-resume.json
+auto-resume.json.tmp
+auto-resume-results.json
+connection-check.txt
+
+# Editor and OS files
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini
